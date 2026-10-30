@@ -11,9 +11,11 @@ When exploring the codebase, read `GLOSSARY.md` (if it exists) so test names and
 
 ## What a good test is
 
-Tests verify behavior through public interfaces, not implementation details. Code can change entirely; tests shouldn't. A good test reads like a specification: "user can checkout with valid cart" tells you exactly what capability exists, and it survives refactors because it doesn't care about internal structure.
+The `principle-test-behavior-not-implementation` skill is the source of truth: a test must fail when the behavior breaks and keep passing when only the internals change. A good test reads like a specification: "user can checkout with valid cart" tells you exactly what capability exists.
 
 See [tests.md](tests.md) for examples and [mocking.md](mocking.md) for mocking guidelines.
+
+**Prefer no new test over a bad test.** When the only available test needs broad harness setup, brittle mocks, production-only state, or large unrelated fixture churn, say so and use the closest executable check instead (a targeted script, a CLI run against a fixture, a browser automation step).
 
 ## Seams: where tests go
 
@@ -23,7 +25,7 @@ A **seam** is the public boundary you test at: the interface where you observe b
 
 Ask: "What's the public interface, and which seams should we test?" Give each proposed seam a one-line note on what it catches and what it misses.
 
-When the shape of that interface is itself in question (how deep the module is, where the seam belongs, what the interface should expose), call the Skill tool with "codebase-design" for the vocabulary. It is the shared source of the module, interface, depth, seam, adapter, leverage and locality terms, and it is a reference to consult, not a session to run.
+When the shape of that interface is itself in question (how deep the module is, where the seam belongs, what the interface should expose), read the `codebase-design` skill for the vocabulary. It is the shared source of the module, interface, depth, seam, adapter, leverage and locality terms, and it is a reference to consult, not a session to run.
 
 ## Anti-patterns
 
@@ -36,3 +38,7 @@ When the shape of that interface is itself in question (how deep the module is, 
 - **Red before green.** Write the failing test first, then only enough code to pass it. Don't anticipate future tests or add speculative features.
 - **One slice at a time.** One seam, one test, one minimal implementation per cycle.
 - **Refactoring is not part of the loop.** It belongs to the review stage (see the `code-review` skill), not the red → green implementation cycle.
+
+## Report the evidence
+
+When the loop is done, name each test that went red before its code existed and the failure it printed, then the run where it passed. If a red step could not be shown, say why and name the check used instead.

@@ -1,0 +1,304 @@
+{
+  "sources": {
+    "matt": {
+      "repo": "https://github.com/mattpocock/skills",
+      "ref": "main",
+      "root": "skills",
+      "exclude": [
+        "openai.yaml"
+      ]
+    },
+    "pstack": {
+      "repo": "https://github.com/cursor/plugins",
+      "ref": "main",
+      "root": "pstack/skills",
+      "exclude": []
+    }
+  },
+  "skills": {
+    "grilling": {
+      "source": "matt",
+      "path": "productivity/grilling",
+      "group": "t-coding"
+    },
+    "grill-me": {
+      "source": "matt",
+      "path": "productivity/grill-me",
+      "group": "t-coding"
+    },
+    "grill-with-docs": {
+      "source": "matt",
+      "path": "engineering/grill-with-docs",
+      "group": "t-coding"
+    },
+    "domain-modeling": {
+      "source": "matt",
+      "path": "engineering/domain-modeling",
+      "group": "t-coding"
+    },
+    "setup-project": {
+      "source": "matt",
+      "path": "engineering/setup-matt-pocock-skills",
+      "group": "t-coding"
+    },
+    "to-spec": {
+      "source": "matt",
+      "path": "engineering/to-spec",
+      "group": "t-coding"
+    },
+    "to-tickets": {
+      "source": "matt",
+      "path": "engineering/to-tickets",
+      "group": "t-coding"
+    },
+    "codebase-design": {
+      "source": "matt",
+      "path": "engineering/codebase-design",
+      "group": "t-coding"
+    },
+    "implement": {
+      "source": "matt",
+      "path": "engineering/implement",
+      "group": "t-coding"
+    },
+    "tdd": {
+      "source": "matt",
+      "path": "engineering/tdd",
+      "also": "pstack:tdd",
+      "group": "t-coding"
+    },
+    "prototype": {
+      "source": "matt",
+      "path": "engineering/prototype",
+      "group": "t-coding"
+    },
+    "diagnosing-bugs": {
+      "source": "matt",
+      "path": "engineering/diagnosing-bugs",
+      "group": "t-coding"
+    },
+    "code-review": {
+      "source": "matt",
+      "path": "engineering/code-review",
+      "group": "t-coding"
+    },
+    "teach": {
+      "source": "matt",
+      "path": "productivity/teach",
+      "group": "t-learning"
+    },
+    "wait-what": {
+      "source": "matt",
+      "path": "productivity/wait-what",
+      "also": "pstack:bro",
+      "group": "t-core"
+    },
+    "writing-for-agents": {
+      "source": "matt",
+      "path": "productivity/writing-for-agents",
+      "group": "t-writing"
+    },
+    "handoff": {
+      "source": "matt",
+      "path": "productivity/handoff",
+      "group": "t-core"
+    },
+    "retro": {
+      "source": "matt",
+      "path": "engineering/retro",
+      "also": "pstack:reflect",
+      "group": "t-core"
+    },
+    "architect": {
+      "source": "pstack",
+      "path": "architect",
+      "also": "matt:engineering/codebase-design/DESIGN-IT-TWICE.md",
+      "group": "t-coding"
+    },
+    "how": {
+      "source": "pstack",
+      "path": "how",
+      "group": "t-coding"
+    },
+    "blast-radius": {
+      "source": "pstack",
+      "path": "blast-radius",
+      "group": "t-coding"
+    },
+    "in-your-own-words": {
+      "source": "pstack",
+      "path": "in-your-own-words",
+      "group": "t-core"
+    },
+    "sharpen": {
+      "source": "pstack",
+      "path": "sharpen",
+      "group": "t-core"
+    },
+    "unslop": {
+      "source": "pstack",
+      "path": "unslop",
+      "group": "t-writing"
+    },
+    "technical-writing": {
+      "source": "pstack",
+      "path": "technical-writing",
+      "group": "t-writing"
+    },
+    "typescript-best-practices": {
+      "source": "pstack",
+      "path": "typescript-best-practices",
+      "group": "t-coding"
+    },
+    "principle-attack-the-premise": {
+      "source": "pstack",
+      "path": "principle-attack-the-premise",
+      "group": "t-coding"
+    },
+    "principle-boundary-discipline": {
+      "source": "pstack",
+      "path": "principle-boundary-discipline",
+      "group": "t-coding"
+    },
+    "principle-build-the-lever": {
+      "source": "pstack",
+      "path": "principle-build-the-lever",
+      "group": "t-coding"
+    },
+    "principle-encode-lessons-in-structure": {
+      "source": "pstack",
+      "path": "principle-encode-lessons-in-structure",
+      "group": "t-coding"
+    },
+    "principle-experience-first": {
+      "source": "pstack",
+      "path": "principle-experience-first",
+      "group": "t-coding"
+    },
+    "principle-fix-root-causes": {
+      "source": "pstack",
+      "path": "principle-fix-root-causes",
+      "group": "t-coding"
+    },
+    "principle-foundational-thinking": {
+      "source": "pstack",
+      "path": "principle-foundational-thinking",
+      "group": "t-coding"
+    },
+    "principle-guard-the-context-window": {
+      "source": "pstack",
+      "path": "principle-guard-the-context-window",
+      "group": "t-coding"
+    },
+    "principle-laziness-protocol": {
+      "source": "pstack",
+      "path": "principle-laziness-protocol",
+      "group": "t-coding"
+    },
+    "principle-minimize-reader-load": {
+      "source": "pstack",
+      "path": "principle-minimize-reader-load",
+      "group": "t-coding"
+    },
+    "principle-model-the-domain": {
+      "source": "pstack",
+      "path": "principle-model-the-domain",
+      "group": "t-coding"
+    },
+    "principle-prove-it-works": {
+      "source": "pstack",
+      "path": "principle-prove-it-works",
+      "group": "t-coding"
+    },
+    "principle-redesign-from-first-principles": {
+      "source": "pstack",
+      "path": "principle-redesign-from-first-principles",
+      "group": "t-coding"
+    },
+    "principle-sequence-verifiable-units": {
+      "source": "pstack",
+      "path": "principle-sequence-verifiable-units",
+      "group": "t-coding"
+    },
+    "principle-subtract-before-you-add": {
+      "source": "pstack",
+      "path": "principle-subtract-before-you-add",
+      "group": "t-coding"
+    },
+    "principle-test-behavior-not-implementation": {
+      "source": "pstack",
+      "path": "principle-test-behavior-not-implementation",
+      "group": "t-coding"
+    },
+    "principle-type-system-discipline": {
+      "source": "pstack",
+      "path": "principle-type-system-discipline",
+      "group": "t-coding"
+    },
+    "inbox-capture": {
+      "source": "local",
+      "group": "t-obsidian"
+    },
+    "t-mode": {
+      "source": "local",
+      "group": "t-core"
+    }
+  },
+  "left_out": {
+    "matt": [
+      "engineering/ask-matt",
+      "engineering/implement-spec",
+      "engineering/improve-codebase-architecture",
+      "engineering/pr",
+      "engineering/research",
+      "engineering/triage",
+      "engineering/wayfinder",
+      "engineering/wizard",
+      "productivity/to-questionnaire",
+      "in-progress/*",
+      "misc/*"
+    ],
+    "pstack": [
+      "arena",
+      "automate-me",
+      "benchmark-checklist",
+      "bro",
+      "correct",
+      "create-formal-verification-skill",
+      "create-verification-skill",
+      "figure-it-out",
+      "interrogate",
+      "ketchup",
+      "ketchup-video",
+      "maintain-formal-verification-skill",
+      "maintain-verification-skill",
+      "make-bot-ui",
+      "no-comments",
+      "poteto-help",
+      "poteto-mode",
+      "recall",
+      "reflect",
+      "setup-pstack",
+      "show-me-your-work",
+      "statechart",
+      "swarm",
+      "tdd",
+      "teach",
+      "why",
+      "principle-exhaust-the-design-space",
+      "principle-explain-the-number",
+      "principle-make-operations-idempotent",
+      "principle-migrate-callers-then-delete-legacy-apis",
+      "principle-never-block-on-the-human",
+      "principle-outcome-oriented-execution",
+      "principle-separate-before-serializing-shared-state"
+    ]
+  },
+  "groups": {
+    "t-coding": "Grill-first planning, specs and tickets, architecture, TDD, debugging, code review, and the engineering principles.",
+    "t-writing": "Plain writing: unslop, technical writing, and writing docs and skills for agents.",
+    "t-learning": "Socratic, multi-session teaching with lessons and quizzes.",
+    "t-core": "My working style (t-mode) and session tools: handoff, retro, sharpen, re-pitch, restate goals.",
+    "t-obsidian": "Capture ideas and sources into my Obsidian second-brain inbox."
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "name": "tuuxic",
+  "owner": {
+    "name": "Tuuxic"
+  },
+  "description": "Tuuxic's skill library, one plugin per group. Built from Matt Pocock's skills and poteto's pstack.",
+  "plugins": [
+    {
+      "name": "t-skills",
+      "description": "Every skill in the library. Install this or the groups, not both: both together load each skill twice.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Tuuxic"
+      },
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/architect",
+        "./skills/blast-radius",
+        "./skills/code-review",
+        "./skills/codebase-design",
+        "./skills/diagnosing-bugs",
+        "./skills/domain-modeling",
+        "./skills/grill-me",
+        "./skills/grill-with-docs",
+        "./skills/grilling",
+        "./skills/handoff",
+        "./skills/how",
+        "./skills/implement",
+        "./skills/in-your-own-words",
+        "./skills/inbox-capture",
+        "./skills/principle-attack-the-premise",
+        "./skills/principle-boundary-discipline",
+        "./skills/principle-build-the-lever",
+        "./skills/principle-encode-lessons-in-structure",
+        "./skills/principle-experience-first",
+        "./skills/principle-fix-root-causes",
+        "./skills/principle-foundational-thinking",
+        "./skills/principle-guard-the-context-window",
+        "./skills/principle-laziness-protocol",
+        "./skills/principle-minimize-reader-load",
+        "./skills/principle-model-the-domain",
+        "./skills/principle-prove-it-works",
+        "./skills/principle-redesign-from-first-principles",
+        "./skills/principle-sequence-verifiable-units",
+        "./skills/principle-subtract-before-you-add",
+        "./skills/principle-test-behavior-not-implementation",
+        "./skills/principle-type-system-discipline",
+        "./skills/prototype",
+        "./skills/retro",
+        "./skills/setup-project",
+        "./skills/sharpen",
+        "./skills/t-mode",
+        "./skills/tdd",
+        "./skills/teach",
+        "./skills/technical-writing",
+        "./skills/to-spec",
+        "./skills/to-tickets",
+        "./skills/typescript-best-practices",
+        "./skills/unslop",
+        "./skills/wait-what",
+        "./skills/writing-for-agents"
+      ]
+    },
+    {
+      "name": "t-coding",
+      "description": "Grill-first planning, specs and tickets, architecture, TDD, debugging, code review, and the engineering principles.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Tuuxic"
+      },
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/architect",
+        "./skills/blast-radius",
+        "./skills/code-review",
+        "./skills/codebase-design",
+        "./skills/diagnosing-bugs",
+        "./skills/domain-modeling",
+        "./skills/grill-me",
+        "./skills/grill-with-docs",
+        "./skills/grilling",
+        "./skills/how",
+        "./skills/implement",
+        "./skills/principle-attack-the-premise",
+        "./skills/principle-boundary-discipline",
+        "./skills/principle-build-the-lever",
+        "./skills/principle-encode-lessons-in-structure",
+        "./skills/principle-experience-first",
+        "./skills/principle-fix-root-causes",
+        "./skills/principle-foundational-thinking",
+        "./skills/principle-guard-the-context-window",
+        "./skills/principle-laziness-protocol",
+        "./skills/principle-minimize-reader-load",
+        "./skills/principle-model-the-domain",
+        "./skills/principle-prove-it-works",
+        "./skills/principle-redesign-from-first-principles",
+        "./skills/principle-sequence-verifiable-units",
+        "./skills/principle-subtract-before-you-add",
+        "./skills/principle-test-behavior-not-implementation",
+        "./skills/principle-type-system-discipline",
+        "./skills/prototype",
+        "./skills/setup-project",
+        "./skills/tdd",
+        "./skills/to-spec",
+        "./skills/to-tickets",
+        "./skills/typescript-best-practices"
+      ]
+    },
+    {
+      "name": "t-writing",
+      "description": "Plain writing: unslop, technical writing, and writing docs and skills for agents.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Tuuxic"
+      },
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/technical-writing",
+        "./skills/unslop",
+        "./skills/writing-for-agents"
+      ]
+    },
+    {
+      "name": "t-learning",
+      "description": "Socratic, multi-session teaching with lessons and quizzes.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Tuuxic"
+      },
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/teach"
+      ]
+    },
+    {
+      "name": "t-core",
+      "description": "My working style (t-mode) and session tools: handoff, retro, sharpen, re-pitch, restate goals.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Tuuxic"
+      },
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/handoff",
+        "./skills/in-your-own-words",
+        "./skills/retro",
+        "./skills/sharpen",
+        "./skills/t-mode",
+        "./skills/wait-what"
+      ]
+    },
+    {
+      "name": "t-obsidian",
+      "description": "Capture ideas and sources into my Obsidian second-brain inbox.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Tuuxic"
+      },
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/inbox-capture"
+      ]
+    }
+  ]
+}

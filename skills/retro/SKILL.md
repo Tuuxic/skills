@@ -8,7 +8,7 @@ The user has asked for a **retrospective**. You are suggesting improvements to t
 
 ## Steps
 
-1. Call the Skill tool with `writing-for-agents` for the writing style guide.
+1. Read the `writing-for-agents` skill for the writing style guide.
 
 2. Read the primary sources for the session the user specifies. This may mean searching through session logs on this machine. If the user doesn't specify a session, default to the current one.
 
@@ -21,8 +21,9 @@ The user has asked for a **retrospective**. You are suggesting improvements to t
 - **Tool economy**: did the agent make expensive tool calls that could be streamlined? Is there any custom tooling (CLI's, MCP's) that is particularly token-inefficient? _Use when_ the agent made an expensive tool call.
 - **No-ops**: look for instructions in steering files that don't modify the agent's behavior. _Use when_ the steering files are large and unwieldy.
 - **Information access**: look for opportunities to increase the agent's access to information. Teeing dev server logs, readonly access to third-party services. _Use when_ a crucial piece of information was not available to the agent.
+- **Skills**: did a skill misfire, fail to trigger, or give advice the session had to work around? Name the skill and the concrete edit (a tightened sentence, a sharper description, a new step). _Use when_ the agent followed a skill and still went wrong, or should have reached for one and didn't.
 
-4. Present these candidates to the user, in order of severity.
+4. Present these candidates to the user, in order of severity. Apply none until the user picks which ones to take. Skill edits go to the user's skills library repo, not to an installed copy.
 
 ## Reference
 

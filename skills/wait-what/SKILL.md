@@ -1,7 +1,12 @@
 ---
 name: wait-what
-description: "Stop. That last message did not land: re-pitch it."
+description: "Stop. That last message did not land: re-pitch it plainly."
 disable-model-invocation: true
 ---
 
-Wait, I don't understand where you've got to here. Re-pitch that: give me a little bit of context, talk in ASD-STE100 Simplified Technical English, and use the ubiquitous language from `GLOSSARY.md` (follow `GLOSSARY-MAP.md` to the right one if the repo has more than one).
+Your last message didn't land. Re-pitch it:
+
+- Give a little context first: where we are and why it matters.
+- Say it like one human talking to another. No jargon, shorter than before.
+- Use ASD-STE100 Simplified Technical English: one thought per sentence, one word per meaning.
+- Use the terms from `GLOSSARY.md` when the repo has one (follow `GLOSSARY-MAP.md` to the right one).

@@ -1,7 +1,6 @@
 ---
 name: unslop
-description: Cut AI tells from any writing.
-disable-model-invocation: true
+description: "Cut AI tells from any writing. Use when writing or editing prose a human will read: docs, READMEs, notes, messages, PR descriptions."
 ---
 
 # Unslop
