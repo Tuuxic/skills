@@ -1,6 +1,7 @@
 ---
 name: principle-structure-over-branches
 description: "Apply when writing stateful logic, or when code branches a lot or repeats a shape assumption across files."
+disable-model-invocation: true
 ---
 
 # Structure Over Branches

@@ -14,7 +14,7 @@ Use the `tdd` skill where possible, at pre-agreed seams.
 
 Run typechecking regularly, single test files regularly, and the full test suite once at the end.
 
-Before calling a ticket done, apply `principle-prove-it-works`: run the real feature, not only the tests. Then mark the ticket done in the tracker.
+Before calling a ticket done, apply [`principle-prove-it-works`](../principle-prove-it-works/SKILL.md): run the real feature, not only the tests. Then mark the ticket done in the tracker.
 
 Once done, use the `code-review` skill to review the work.
 

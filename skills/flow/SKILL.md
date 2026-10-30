@@ -47,4 +47,4 @@ Done when the user knows the one command to type next.
 
 **My working style for this session:** `/t-mode`.
 
-The rest start by themselves from what you ask: `how` for code walkthroughs, `prototype` for design questions, `unslop` and `technical-writing` for prose, `inbox-capture` for saving notes, and the principles.
+The rest start by themselves from what you ask: `how` for code walkthroughs, `prototype` for design questions, `unslop` and `technical-writing` for prose, `inbox-capture` for saving notes. The principles come in through `/t-mode`'s index and the skills that link them.

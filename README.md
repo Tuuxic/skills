@@ -47,7 +47,7 @@ A skill's group is its `group` field in `upstream.json`. After changing a group 
 
 **Codex and other agents:** copy or symlink each folder in `skills/` into the agent's skills directory. Each user-only skill carries an `agents/openai.yaml` that turns off implicit invocation in Codex.
 
-**claude.ai / Claude app:** zip one skill folder and upload it under Settings, Capabilities, Skills. `disable-model-invocation` is a Claude Code field, and `agents/openai.yaml` is Codex's. Harnesses that read neither can trigger user-only skills on their own.
+**claude.ai / Claude app:** zip one skill folder and upload it under Settings, Capabilities, Skills. Links between skills (`t-mode`'s principle index, for one) need the linked skill folders uploaded too. `disable-model-invocation` is a Claude Code field, and `agents/openai.yaml` is Codex's. Harnesses that read neither can trigger user-only skills on their own.
 
 ## Skills
 
@@ -119,7 +119,9 @@ A skill's group is its `group` field in `upstream.json`. After changing a group 
 
 ### Principles
 
-Small rules from pstack that each trigger on their own situation (all auto): `attack-the-premise`, `boundary-discipline`, `build-the-lever`, `encode-lessons-in-structure`, `experience-first`, `fix-root-causes`, `foundational-thinking`, `guard-the-context-window`, `laziness-protocol`, `minimize-reader-load`, `prove-it-works`, `redesign-from-first-principles`, `sequence-verifiable-units`, `structure-over-branches`, `subtract-before-you-add`, `test-behavior-not-implementation`, `type-system-discipline`. Each is `principle-<name>`.
+17 small rules from pstack, one per skill, each named `principle-<name>`: `attack-the-premise`, `boundary-discipline`, `build-the-lever`, `encode-lessons-in-structure`, `experience-first`, `fix-root-causes`, `foundational-thinking`, `guard-the-context-window`, `laziness-protocol`, `minimize-reader-load`, `prove-it-works`, `redesign-from-first-principles`, `sequence-verifiable-units`, `structure-over-branches`, `subtract-before-you-add`, `test-behavior-not-implementation`, `type-system-discipline`.
+
+They are user-only, as in pstack, so they cost no context until read. The agent reaches them two ways: through the index in `/t-mode`, which it scans at the start of a coding task, and through skills that link one (`architect`, `tdd`, `implement`, `diagnosing-bugs`, `typescript-best-practices`). Without `/t-mode`, only those links reach them.
 
 ## Where the skills come from
 

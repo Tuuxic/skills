@@ -11,7 +11,7 @@ When exploring the codebase, read `GLOSSARY.md` (if it exists) so test names and
 
 ## What a good test is
 
-The `principle-test-behavior-not-implementation` skill is the source of truth: a test must fail when the behavior breaks and keep passing when only the internals change. A good test reads like a specification: "user can checkout with valid cart" tells you exactly what capability exists.
+The [`principle-test-behavior-not-implementation`](../principle-test-behavior-not-implementation/SKILL.md) skill is the source of truth: a test must fail when the behavior breaks and keep passing when only the internals change. A good test reads like a specification: "user can checkout with valid cart" tells you exactly what capability exists.
 
 See [tests.md](tests.md) for examples and [mocking.md](mocking.md) for mocking guidelines.
 

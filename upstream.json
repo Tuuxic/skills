@@ -241,6 +241,7 @@
     },
     "t-mode": {
       "source": "local",
+      "also": "pstack:poteto-mode",
       "group": "t-core"
     },
     "flow": {

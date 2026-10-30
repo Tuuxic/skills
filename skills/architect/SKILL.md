@@ -22,10 +22,10 @@ Design it twice. Follow [DESIGN-IT-TWICE.md](../codebase-design/DESIGN-IT-TWICE.
 
 Each candidate writes the caller's usage first (two or three realistic call sites) and derives the types from it. Apply these while sketching:
 
-- Data structures first, per `principle-foundational-thinking` and `principle-structure-over-branches`.
-- Encode invariants in types, per `principle-type-system-discipline`.
-- Validate at boundaries, trust types inside, per `principle-boundary-discipline`.
-- Short call chains, per `principle-minimize-reader-load`.
+- Data structures first, per [`principle-foundational-thinking`](../principle-foundational-thinking/SKILL.md) and [`principle-structure-over-branches`](../principle-structure-over-branches/SKILL.md).
+- Encode invariants in types, per [`principle-type-system-discipline`](../principle-type-system-discipline/SKILL.md).
+- Validate at boundaries, trust types inside, per [`principle-boundary-discipline`](../principle-boundary-discipline/SKILL.md).
+- Short call chains, per [`principle-minimize-reader-load`](../principle-minimize-reader-load/SKILL.md).
 
 Screen every candidate against [references/design-red-flags.md](references/design-red-flags.md). Assume the next contributor is an agent that sees only the files it opened, copies the nearest example, and takes the shortest path that compiles. Prefer the design where a change that looks right from one file is right for the whole repo.
 
@@ -43,11 +43,11 @@ If the user pushes back on the shape, treat that as Phase A evidence. Re-ground 
 
 Replace `not implemented` bodies with code and pseudocode with logic. The sketch is the contract. Deviations from it are signal to surface, not friction to absorb silently. If a function needs a parameter the sketch didn't anticipate, ask whether the sketch was wrong, the requirement was missed, or the implementation is overreaching.
 
-The sketch can ship as its own commit first, as the scaffold-first mode of `principle-foundational-thinking`.
+The sketch can ship as its own commit first, as the scaffold-first mode of [`principle-foundational-thinking`](../principle-foundational-thinking/SKILL.md).
 
 ## Phase E: Scrap when the architecture is wrong
 
-If implementation keeps producing friction the sketch can't absorb, throw the sketch out. Don't bolt fixes onto a wrong design, per `principle-redesign-from-first-principles` and `principle-fix-root-causes`.
+If implementation keeps producing friction the sketch can't absorb, throw the sketch out. Don't bolt fixes onto a wrong design, per [`principle-redesign-from-first-principles`](../principle-redesign-from-first-principles/SKILL.md) and [`principle-fix-root-causes`](../principle-fix-root-causes/SKILL.md).
 
 The signal is a pattern, not a single instance:
 
@@ -59,7 +59,7 @@ The signal is a pattern, not a single instance:
 
 A few edge cases don't condemn an architecture. Complexity in the data is not complexity in the design.
 
-When you scrap, tell the user why, rerun `how` over what's been built, subtract before adding (`principle-subtract-before-you-add`), and return to Phase B. The new sketch should be smaller than the old one before it grows.
+When you scrap, tell the user why, rerun `how` over what's been built, subtract before adding ([`principle-subtract-before-you-add`](../principle-subtract-before-you-add/SKILL.md)), and return to Phase B. The new sketch should be smaller than the old one before it grows.
 
 ## Outputs
 

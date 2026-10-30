@@ -95,7 +95,7 @@ Each hypothesis must be **falsifiable**: state the prediction it makes.
 
 If you cannot state the prediction, the hypothesis is a vibe: discard or sharpen it.
 
-If two or more fixes that share one premise have already failed, write that premise down and test it before ranking anything else, per `principle-attack-the-premise`.
+If two or more fixes that share one premise have already failed, write that premise down and test it before ranking anything else, per [`principle-attack-the-premise`](../principle-attack-the-premise/SKILL.md).
 
 **Show the ranked list to the user before testing.** They often have domain knowledge that re-ranks instantly ("we just deployed a change to #3"), or know hypotheses they've already ruled out. Cheap checkpoint, big time saver. Don't block on it; proceed with your ranking if the user is AFK.
 
@@ -121,7 +121,7 @@ A correct seam is one where the test exercises the **real bug pattern** as it oc
 
 **If no correct seam exists, that itself is the finding.** Note it. The codebase architecture is preventing the bug from being locked down. Flag this for the next phase.
 
-Fix the root cause, not the place the symptom surfaced, per `principle-fix-root-causes`. A guard is a fix only when the state it handles is legitimate.
+Fix the root cause, not the place the symptom surfaced, per [`principle-fix-root-causes`](../principle-fix-root-causes/SKILL.md). A guard is a fix only when the state it handles is legitimate.
 
 If a correct seam exists:
 
