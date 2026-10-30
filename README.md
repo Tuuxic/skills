@@ -22,10 +22,10 @@ How the library works:
 | `t-core` | `t-mode` and session tools. |
 | `t-obsidian` | `inbox-capture`. |
 
-Add the marketplace from this folder (or as `Tuuxic/skills` once it's on GitHub), then install:
+Add the marketplace from GitHub (or from a local clone by its path), then install:
 
 ```
-claude plugin marketplace add C:/Users/Nikolai/Desktop/Dev/Projekte/skills
+claude plugin marketplace add Tuuxic/skills
 claude plugin install t-skills@tuuxic
 ```
 

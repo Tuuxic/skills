@@ -49,7 +49,7 @@ The table states intent. For the exact lines, run `git diff vendor/<source> -- s
 | `technical-writing` | adapted | pstack | | Model-invoked. Removed the Cursor adapter line and poteto-specific rules (tab indentation, "swarm logs"). |
 | `typescript-best-practices` | adapted | pstack | | Model-invoked. |
 | `principle-*` (17) | adapted | pstack | | Only the frontmatter changed: `disable-model-invocation` is removed, so each principle triggers on its own. `principle-prove-it-works` also lost the Cursor adapter line and its link to `show-me-your-work`. |
-| `inbox-capture` | own | | | Written from my vault's `CLAUDE.md`, its templates, and one existing capture. |
+| `inbox-capture` | own | | | Written from my vault's `CLAUDE.md`, its templates, and one existing capture. Finds the vault per device (working directory, `SECOND_BRAIN_VAULT`, memory, or asks). |
 | `t-mode` | own | | | Written from my vault's conversation rules and the decisions made while building this library. |
 
 Other files that are my own: `README.md`, `PROVENANCE.md`, `upstream.json`, `scripts/`, and `.claude-plugin/`.
