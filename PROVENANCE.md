@@ -51,6 +51,7 @@ The table states intent. For the exact lines, run `git diff vendor/<source> -- s
 | `principle-*` (17) | adapted | pstack | | Only the frontmatter changed: `disable-model-invocation` is removed, so each principle triggers on its own. `principle-prove-it-works` also lost the Cursor adapter line and its link to `show-me-your-work`. `principle-model-the-domain` is renamed `principle-structure-over-branches` (folder, `name`, and heading), so it no longer shares its words with `domain-modeling`, which means glossary and ADRs. |
 | `inbox-capture` | own | | | Written from my vault's `CLAUDE.md`, its templates, and one existing capture. Finds the vault per device (working directory, `SECOND_BRAIN_VAULT`, memory, or asks). |
 | `t-mode` | own | | | Written from my vault's conversation rules and the decisions made while building this library. |
+| `flow` | own | | | Router skill, per `writing-for-agents`' router pattern: maps situations to the user-invoked skills. |
 
 Other files that are my own: `README.md`, `PROVENANCE.md`, `upstream.json`, `scripts/`, and `.claude-plugin/`.
 

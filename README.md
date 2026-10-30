@@ -19,7 +19,7 @@ How the library works:
 | `t-coding` | Planning, building, debugging, review, and the principles. |
 | `t-writing` | `unslop`, `technical-writing`, `writing-for-agents`. |
 | `t-learning` | `teach`. |
-| `t-core` | `t-mode` and session tools. |
+| `t-core` | `t-mode`, the `flow` router, and session tools. |
 | `t-obsidian` | `inbox-capture`. |
 
 Add the marketplace from GitHub (or from a local clone by its path), then install:
@@ -51,7 +51,7 @@ A skill's group is its `group` field in `upstream.json`. After changing a group 
 
 ## Skills
 
-"User" means you type `/name` to run it. "Auto" means the agent can also pick it up from its description.
+"User" means you type `/name` to run it. "Auto" means the agent can also pick it up from its description. Not sure which to run: `/flow`.
 
 ### Planning
 
@@ -113,6 +113,7 @@ A skill's group is its `group` field in `upstream.json`. After changing a group 
 
 | Skill | Run | What it does |
 |---|---|---|
+| `flow` | user | Router: names the command to run next for a feature, bug, design, learning, or session end. |
 | `t-mode` | user | My working style in one place. |
 | `inbox-capture` | auto | Writes a capture into my Obsidian vault's `inbox/` the way the vault's `CLAUDE.md` asks. |
 

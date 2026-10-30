@@ -21,6 +21,7 @@
         "./skills/codebase-design",
         "./skills/diagnosing-bugs",
         "./skills/domain-modeling",
+        "./skills/flow",
         "./skills/grill-me",
         "./skills/grill-with-docs",
         "./skills/grilling",
@@ -138,7 +139,7 @@
     },
     {
       "name": "t-core",
-      "description": "My working style (t-mode) and session tools: handoff, retro, sharpen, re-pitch, restate goals.",
+      "description": "My working style (t-mode), the flow router, and session tools: handoff, retro, sharpen, re-pitch, restate goals.",
       "version": "0.1.0",
       "author": {
         "name": "Tuuxic"
@@ -146,6 +147,7 @@
       "source": "./",
       "strict": false,
       "skills": [
+        "./skills/flow",
         "./skills/handoff",
         "./skills/in-your-own-words",
         "./skills/retro",

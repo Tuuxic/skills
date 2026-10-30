@@ -242,6 +242,10 @@
     "t-mode": {
       "source": "local",
       "group": "t-core"
+    },
+    "flow": {
+      "source": "local",
+      "group": "t-core"
     }
   },
   "left_out": {
@@ -298,7 +302,7 @@
     "t-coding": "Grill-first planning, specs and tickets, architecture, TDD, debugging, code review, and the engineering principles.",
     "t-writing": "Plain writing: unslop, technical writing, and writing docs and skills for agents.",
     "t-learning": "Socratic, multi-session teaching with lessons and quizzes.",
-    "t-core": "My working style (t-mode) and session tools: handoff, retro, sharpen, re-pitch, restate goals.",
+    "t-core": "My working style (t-mode), the flow router, and session tools: handoff, retro, sharpen, re-pitch, restate goals.",
     "t-obsidian": "Capture ideas and sources into my Obsidian second-brain inbox."
   }
 }
