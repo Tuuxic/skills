@@ -22,7 +22,7 @@ Design it twice. Follow [DESIGN-IT-TWICE.md](../codebase-design/DESIGN-IT-TWICE.
 
 Each candidate writes the caller's usage first (two or three realistic call sites) and derives the types from it. Apply these while sketching:
 
-- Data structures first, per `principle-foundational-thinking` and `principle-model-the-domain`.
+- Data structures first, per `principle-foundational-thinking` and `principle-structure-over-branches`.
 - Encode invariants in types, per `principle-type-system-discipline`.
 - Validate at boundaries, trust types inside, per `principle-boundary-discipline`.
 - Short call chains, per `principle-minimize-reader-load`.

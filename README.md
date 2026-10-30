@@ -43,11 +43,11 @@ From GitHub in one step: `/plugin install t-skills --marketplace Tuuxic/skills` 
 
 Groups refer to each other by skill name. `t-core`'s `t-mode` uses skills from `t-coding`, `t-writing`, and `t-learning`, and `t-coding`'s `blast-radius` uses `unslop`. A missing group only means those pointers go nowhere. `python scripts/build_marketplace.py` lists every cross-group reference.
 
-A skill's group is its `group` field in `upstream.json`. After changing one, run `python scripts/build_marketplace.py` to regenerate `.claude-plugin/marketplace.json`.
+A skill's group is its `group` field in `upstream.json`. After changing a group or a skill's `disable-model-invocation`, run `python scripts/build_marketplace.py`. It regenerates `.claude-plugin/marketplace.json` and the `agents/openai.yaml` files.
 
-**Codex and other agents:** copy or symlink each folder in `skills/` into the agent's skills directory.
+**Codex and other agents:** copy or symlink each folder in `skills/` into the agent's skills directory. Each user-only skill carries an `agents/openai.yaml` that turns off implicit invocation in Codex.
 
-**claude.ai / Claude app:** zip one skill folder and upload it under Settings, Capabilities, Skills. `disable-model-invocation` is a Claude Code field. Other harnesses ignore it, so those skills can trigger on their own there.
+**claude.ai / Claude app:** zip one skill folder and upload it under Settings, Capabilities, Skills. `disable-model-invocation` is a Claude Code field, and `agents/openai.yaml` is Codex's. Harnesses that read neither can trigger user-only skills on their own.
 
 ## Skills
 
@@ -118,7 +118,7 @@ A skill's group is its `group` field in `upstream.json`. After changing one, run
 
 ### Principles
 
-Small rules from pstack that each trigger on their own situation (all auto): `attack-the-premise`, `boundary-discipline`, `build-the-lever`, `encode-lessons-in-structure`, `experience-first`, `fix-root-causes`, `foundational-thinking`, `guard-the-context-window`, `laziness-protocol`, `minimize-reader-load`, `model-the-domain`, `prove-it-works`, `redesign-from-first-principles`, `sequence-verifiable-units`, `subtract-before-you-add`, `test-behavior-not-implementation`, `type-system-discipline`. Each is `principle-<name>`.
+Small rules from pstack that each trigger on their own situation (all auto): `attack-the-premise`, `boundary-discipline`, `build-the-lever`, `encode-lessons-in-structure`, `experience-first`, `fix-root-causes`, `foundational-thinking`, `guard-the-context-window`, `laziness-protocol`, `minimize-reader-load`, `prove-it-works`, `redesign-from-first-principles`, `sequence-verifiable-units`, `structure-over-branches`, `subtract-before-you-add`, `test-behavior-not-implementation`, `type-system-discipline`. Each is `principle-<name>`.
 
 ## Where the skills come from
 
