@@ -29,7 +29,7 @@ The table states intent. For the exact lines, run `git diff vendor/<source> -- s
 | `writing-for-agents` | upstream | matt | | |
 | `in-your-own-words` | upstream | pstack | | |
 | `sharpen` | upstream | pstack | | |
-| `grilling` | adapted | matt | | The round template uses the plain characters `◆` and `↳` instead of emojis. |
+| `grilling` | adapted | matt | | A round is a question-tool popup of up to four questions, replacing the numbered list template, with a one-question plain message as the fallback. |
 | `grill-me` | adapted | matt | | "Call the Skill tool" became "use the `grilling` skill", so the wording works in any harness. |
 | `grill-with-docs` | adapted | matt | | Same wording change, plus one clause on capturing terms as they settle. |
 | `handoff` | adapted | matt | | Same wording change. |

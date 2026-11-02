@@ -57,7 +57,7 @@ A skill's group is its `group` field in `upstream.json`. After changing a group 
 
 | Skill | Run | What it does |
 |---|---|---|
-| `grilling` | auto | Interview in rounds over a decision tree, with a recommended answer for each question. |
+| `grilling` | auto | Interview over a decision tree in question popups of up to four questions, with a recommended answer for each. |
 | `grill-me` | user | Shortcut to `grilling`. |
 | `grill-with-docs` | user | `grilling` plus `domain-modeling`: writes the glossary and ADRs as terms settle. |
 | `domain-modeling` | auto | Sharpens terms against `GLOSSARY.md`, offers ADRs sparingly. |
