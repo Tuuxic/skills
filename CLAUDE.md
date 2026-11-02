@@ -14,6 +14,7 @@ A skill's change is complete when these files agree with it:
 | Change what a skill does | Its `README.md` row. |
 | Add a skill | `upstream.json` (`"source": "local"` and a `group` for my own), `README.md`, `PROVENANCE.md`, then run the build. |
 | Change a `group` or `disable-model-invocation` | Run the build. |
+| Edit or add a skill | Raise `VERSION` in `scripts/build_marketplace.py`, then run the build. `/plugin upgrade` skips the new text until the version changes. |
 
 Build: `python scripts/build_marketplace.py`. It owns `.claude-plugin/marketplace.json` and every `agents/openai.yaml`, so change those through the build.
 

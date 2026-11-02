@@ -8,7 +8,7 @@
     {
       "name": "t-skills",
       "description": "Every skill in the library. Install this or the groups, not both: both together load each skill twice.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "author": {
         "name": "Tuuxic"
       },
@@ -66,7 +66,7 @@
     {
       "name": "t-coding",
       "description": "Grill-first planning, specs and tickets, architecture, TDD, debugging, code review, and the engineering principles.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "author": {
         "name": "Tuuxic"
       },
@@ -112,7 +112,7 @@
     {
       "name": "t-writing",
       "description": "Plain writing: unslop, technical writing, and writing docs and skills for agents.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "author": {
         "name": "Tuuxic"
       },
@@ -127,7 +127,7 @@
     {
       "name": "t-learning",
       "description": "Socratic, multi-session teaching with lessons and quizzes.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "author": {
         "name": "Tuuxic"
       },
@@ -140,7 +140,7 @@
     {
       "name": "t-core",
       "description": "My working style (t-mode), the flow router, and session tools: handoff, retro, sharpen, re-pitch, restate goals.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "author": {
         "name": "Tuuxic"
       },
@@ -159,7 +159,7 @@
     {
       "name": "t-obsidian",
       "description": "Capture ideas and sources into my Obsidian second-brain inbox.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "author": {
         "name": "Tuuxic"
       },

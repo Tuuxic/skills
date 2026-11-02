@@ -5,7 +5,7 @@ description: Grill the user relentlessly about a plan, decision, or idea. Use wh
 
 Interview the user relentlessly until you reach a shared understanding. Map this as a **design tree**: every decision branches into the decisions that hang off it.
 
-Work the tree in **rounds**. The **frontier** is every decision whose prerequisites are already settled: the questions you can ask _now_ without guessing at answers you haven't heard yet. A round is one call to the harness's question tool (`AskUserQuestion` in Claude Code) holding up to four frontier questions; the rest of the frontier waits for the next round. List your recommended answer first in each question's options and mark it as recommended. Then wait for the user's answers before the next round.
+Work the tree in **rounds**. The **frontier** is every decision whose prerequisites are already settled: the questions you can ask _now_ without guessing at answers you haven't heard yet. A round is one call to the harness's question tool (`AskUserQuestion` in Claude Code) holding up to four frontier questions, choosing those that the most later decisions depend on; the rest of the frontier waits for the next round. List your recommended answer first in each question's options and mark it as recommended. Then wait for the user's answers before the next round.
 
 If the harness has no question tool, a round is one question in a plain message, with your recommended answer.
 
