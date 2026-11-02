@@ -33,7 +33,7 @@ Compare on interface depth using the `codebase-design` vocabulary. Pick a base, 
 
 ## Phase C: Agree
 
-Show the user the synthesized sketch and rationale, and stop. Treat the "Open questions and risks" section as a grilling round: number each question and give your recommended answer, per the `grilling` skill. Proceed only after the user confirms the shape.
+Show the user the synthesized sketch and rationale, and stop. Treat the "Open questions and risks" section as a grilling round, per the `grilling` skill. Proceed only after the user confirms the shape.
 
 Skip the checkpoint only when the user explicitly says so ("no checkpoint", "just build it").
 
