@@ -30,4 +30,5 @@ The repo has no test suite. Before you call a change done:
 ## Gotchas
 
 - `vendor/matt` holds an untouched upstream copy. Only `sync_upstream.py import` writes to it. `vendor/pstack` is dormant: pstack is out for now, and `PROVENANCE.md` says how to bring it back.
+- In Claude Code, the bare name `code-review` runs the built-in skill. Ours is `t-skills:code-review`, for operative calls and for typing it.
 - The skills loaded in a session come from the installed plugin, not this working tree. To see the current text of a skill, read it under `skills/`.

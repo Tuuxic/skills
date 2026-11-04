@@ -8,7 +8,7 @@
     {
       "name": "t-skills",
       "description": "Matt Pocock's skills for planning, building, debugging, and review, plus my working style (t-mode).",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "author": {
         "name": "Tuuxic"
       },
@@ -48,7 +48,7 @@
     {
       "name": "t-obsidian",
       "description": "Capture ideas and sources into my Obsidian second-brain inbox.",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "author": {
         "name": "Tuuxic"
       },

@@ -43,7 +43,7 @@ Type `/ask-matt` and describe your situation. The usual route for a feature is:
 
 `/grill-with-docs` → `/to-spec` → `/to-tickets` → `/implement` or `/implement-spec` → `/retro`
 
-`/setup-matt-pocock-skills` comes first in each repo. `/implement` and `/implement-spec` drive `tdd` and close with `code-review`.
+`/setup-matt-pocock-skills` comes first in each repo. `/implement` and `/implement-spec` drive `tdd` and close with `code-review`. To run that review yourself in Claude Code, type `/t-skills:code-review`, because `/code-review` is Claude Code's built-in.
 
 ## Skills
 
