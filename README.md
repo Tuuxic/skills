@@ -1,130 +1,110 @@
 # skills
 
-My skill library for AI agents. It started from [Matt Pocock's skills](https://github.com/mattpocock/skills) and poteto's [pstack](https://github.com/cursor/plugins/tree/main/pstack), kept what fits how I work, and resolved the places where the two disagree.
-
-How the library works:
-
-- **Grill first, then build.** Planning goes through an interview until we share an understanding. After that, the agent works with few check-ins.
-- **Proof over claims.** Work is done when it's verified against the real thing.
-- **Plain writing.** Prose goes through `unslop`.
-- **Local first.** Specs and tickets are markdown files in the repo. The tracker is swappable (Notion later) through `/setup-project`.
+My skill library for AI agents, built on [Matt Pocock's skills](https://github.com/mattpocock/skills). His skills stay close to upstream. My own layer adds question popups in `grilling`, my working style, and a note-capture skill.
 
 ## Install
 
-**Claude Code.** The marketplace offers `t-skills` with everything, plus one plugin per group. Install either `t-skills` or the groups you want, not both: both together load each skill twice.
-
-| Plugin | Contents |
-|---|---|
-| `t-skills` | All skills. |
-| `t-coding` | Planning, building, debugging, review, and the principles. |
-| `t-writing` | `unslop`, `technical-writing`, `writing-for-agents`. |
-| `t-learning` | `teach`. |
-| `t-core` | `t-mode`, the `flow` router, and session tools. |
-| `t-obsidian` | `inbox-capture`. |
-
-Add the marketplace from GitHub (or from a local clone by its path), then install:
+**Claude Code.** Add the marketplace from GitHub (or from a local clone by its path), then install:
 
 ```
 claude plugin marketplace add Tuuxic/skills
 claude plugin install t-skills@tuuxic
-```
-
-Or by group:
-
-```
-claude plugin install t-coding@tuuxic
-claude plugin install t-writing@tuuxic
-claude plugin install t-learning@tuuxic
-claude plugin install t-core@tuuxic
 claude plugin install t-obsidian@tuuxic
 ```
 
-From GitHub in one step: `/plugin install t-skills --marketplace Tuuxic/skills` (same for each group).
+| Plugin | Contents |
+|---|---|
+| `t-skills` | Matt's 27 skills and `t-mode`. |
+| `t-obsidian` | `inbox-capture`. Optional. |
 
-Groups refer to each other by skill name. `t-core`'s `t-mode` uses skills from `t-coding`, `t-writing`, and `t-learning`, and `t-coding`'s `blast-radius` uses `unslop`. A missing group only means those pointers go nowhere. `python scripts/build_marketplace.py` lists every cross-group reference.
+Then run `/setup-matt-pocock-skills` once in each repo where you use the engineering skills. It records the issue tracker and the domain doc layout.
 
-A skill's group is its `group` field in `upstream.json`. After changing a group or a skill's `disable-model-invocation`, run `python scripts/build_marketplace.py`. It regenerates `.claude-plugin/marketplace.json` and the `agents/openai.yaml` files.
+**My working style.** A plugin can't install a global `CLAUDE.md`, so on each device, link `personal/CLAUDE.md` from a clone of this repo. Update it with `git pull`.
 
-**Codex and other agents:** copy or symlink each folder in `skills/` into the agent's skills directory. Each user-only skill carries an `agents/openai.yaml` that turns off implicit invocation in Codex.
+On Windows, this needs Developer Mode or an admin PowerShell:
 
-**claude.ai / Claude app:** zip one skill folder and upload it under Settings, Capabilities, Skills. Links between skills (`t-mode`'s principle index, for one) need the linked skill folders uploaded too. `disable-model-invocation` is a Claude Code field, and `agents/openai.yaml` is Codex's. Harnesses that read neither can trigger user-only skills on their own.
+```powershell
+New-Item -ItemType SymbolicLink -Path "$HOME\.claude\CLAUDE.md" -Target "<clone>\personal\CLAUDE.md"
+```
+
+On macOS or Linux:
+
+```sh
+ln -s "<clone>/personal/CLAUDE.md" ~/.claude/CLAUDE.md
+```
+
+Where there is no link or no global `CLAUDE.md`, type `/t-mode` for the full version.
+
+**Codex.** Copy or symlink each folder in `skills/` into the agent's skills directory. Each skill carries an `agents/openai.yaml`.
+
+## Which skill to run
+
+Type `/ask-matt` and describe your situation. The usual route for a feature is:
+
+`/grill-with-docs` → `/to-spec` → `/to-tickets` → `/implement` or `/implement-spec` → `/retro`
+
+`/setup-matt-pocock-skills` comes first in each repo. `/implement` and `/implement-spec` drive `tdd` and close with `code-review`.
 
 ## Skills
 
-"User" means you type `/name` to run it. "Auto" means the agent can also pick it up from its description. Not sure which to run: `/flow`.
+"User" means you type `/name` to run it. "Auto" means the agent can also pick it up from its description.
 
 ### Planning
 
 | Skill | Run | What it does |
 |---|---|---|
-| `grilling` | auto | Interview over a decision tree in question popups of up to four questions, with a recommended answer for each. |
-| `grill-me` | user | Shortcut to `grilling`. |
-| `grill-with-docs` | user | `grilling` plus `domain-modeling`: writes the glossary and ADRs as terms settle. |
-| `domain-modeling` | auto | Sharpens terms against `GLOSSARY.md`, offers ADRs sparingly. |
-| `setup-project` | user | Configures the tracker (local markdown, or Notion and others) and domain-doc layout per repo. |
-| `to-spec` | user | Turns the conversation into a spec in the tracker. |
-| `to-tickets` | user | Breaks a spec into tracer-bullet tickets with blocking edges. |
-| `architect` | user | Sketches types and modules (designed twice), agrees the shape with you, then implements against it. |
+| `ask-matt` | user | Router: says which skill or flow fits your situation. |
+| `setup-matt-pocock-skills` | user | Configures a repo's issue tracker, triage labels, and domain doc layout. |
+| `grilling` | auto | Interview over a decision tree, in question popups of up to four questions with a recommended answer for each. |
+| `grill-me` | user | `grilling` with nothing saved, for work outside a repo. |
+| `grill-with-docs` | user | `grilling` plus `domain-modeling`: updates `GLOSSARY.md` and ADRs as terms settle. |
+| `domain-modeling` | auto | Sharpens terms against `GLOSSARY.md` and records hard-to-reverse decisions as ADRs. |
 | `codebase-design` | auto | Deep-module vocabulary: module, interface, seam, depth, leverage. |
+| `to-spec` | user | Turns the conversation into a spec in the tracker. |
+| `to-tickets` | user | Breaks a plan into tracer-bullet tickets with blocking edges. |
+| `wayfinder` | user | Plans work too big for one session as a map of decision tickets. |
+| `research` | auto | Investigates a question in primary sources and saves a cited Markdown file. |
+| `to-questionnaire` | user | Turns a decision only someone else can answer into a questionnaire for them. |
 
 ### Building and debugging
 
 | Skill | Run | What it does |
 |---|---|---|
-| `implement` | user | Works through tickets with `tdd`, proves each one, then runs `code-review`. |
-| `tdd` | auto | Red-green loop at agreed seams. Prefers no test over a bad test. Reports red/green evidence. |
+| `implement` | user | Builds a spec or ticket with `tdd`, then runs `code-review` and commits. |
+| `implement-spec` | user | Builds a whole spec on one integration branch, with parallel subagents across the ready tickets. |
+| `tdd` | auto | Red-green-refactor, one vertical slice at a time. |
 | `prototype` | auto | Throwaway code to answer a logic or UI question. |
-| `diagnosing-bugs` | auto | Builds a tight red feedback loop, then hypothesises, instruments, and fixes at the root cause. |
-| `typescript-best-practices` | auto | Discriminated unions, branded types, no `as`, parse at boundaries. |
+| `diagnosing-bugs` | auto | Builds a loop that goes red on the bug, then hypothesises, instruments, fixes, and adds a regression test. |
+| `wizard` | auto | Generates an interactive bash script for steps only a human can do. |
 
-### Review
-
-| Skill | Run | What it does |
-|---|---|---|
-| `code-review` | auto | Two parallel reviews: standards (plus a Fowler smell baseline) and spec. |
-| `blast-radius` | user | Finds what a change breaks outside the diff and proves the one fact it's safe because of. |
-
-### Learning
+### Review and upkeep
 
 | Skill | Run | What it does |
 |---|---|---|
-| `teach` | user | Multi-session Socratic teaching workspace: mission, short HTML lessons, quizzes, learning records. |
-| `how` | auto | Explains how a part of a codebase works, with parallel explorers for big subsystems. |
-| `wait-what` | user | Re-pitches the last message plainly. |
-| `in-your-own-words` | user | Restates your goal and problem, to check alignment. |
+| `code-review` | auto | Two parallel reviews of a diff: standards (plus a Fowler smell baseline) and spec. |
+| `pr` | auto | Shapes a pull request body: smallest visual, before/after evidence, and a merge-danger call. |
+| `triage` | user | Moves incoming issues through a state machine of triage roles. |
+| `improve-codebase-architecture` | user | Surveys a codebase for deepening opportunities and grills through the one you pick. |
+| `retro` | user | Suggests improvements to the agent's environment after a session. |
 
-### Writing
+### Session and learning
 
 | Skill | Run | What it does |
 |---|---|---|
-| `unslop` | auto | Catalog of AI writing tells and their fixes. |
-| `technical-writing` | auto | Diátaxis, Google style, Simplified Technical English, Global English. |
+| `handoff` | user | Compacts the session into a doc for another agent. |
+| `wait-what` | user | Re-pitches the last message plainly, with the context you were missing. |
+| `teach` | user | Multi-session teaching workspace with lessons, quizzes, and learning records. |
 | `writing-for-agents` | auto | How to write skills, `CLAUDE.md`, and other docs agents read. |
-
-### Session and meta
-
-| Skill | Run | What it does |
-|---|---|---|
-| `handoff` | user | Compacts the session into a doc for a fresh agent. |
-| `retro` | user | Suggests improvements to the agent's environment and to these skills after a session. |
-| `sharpen` | user | Rewrites a task to be deeper, not bigger. |
 
 ### Personal
 
 | Skill | Run | What it does |
 |---|---|---|
-| `flow` | user | Router: names the command to run next for a feature, bug, design, learning, or session end. |
-| `t-mode` | user | My working style in one place. |
+| `t-mode` | user | My full working style: replies, autonomy, proof, plain writing, and code. |
 | `inbox-capture` | auto | Writes a capture into my Obsidian vault's `inbox/` the way the vault's `CLAUDE.md` asks. |
-
-### Principles
-
-17 small rules from pstack, one per skill, each named `principle-<name>`: `attack-the-premise`, `boundary-discipline`, `build-the-lever`, `encode-lessons-in-structure`, `experience-first`, `fix-root-causes`, `foundational-thinking`, `guard-the-context-window`, `laziness-protocol`, `minimize-reader-load`, `prove-it-works`, `redesign-from-first-principles`, `sequence-verifiable-units`, `structure-over-branches`, `subtract-before-you-add`, `test-behavior-not-implementation`, `type-system-discipline`.
-
-They are user-only, as in pstack, so they cost no context until read. The agent reaches them two ways: through the index in `/t-mode`, which it scans at the start of a coding task, and through skills that link one (`architect`, `tdd`, `implement`, `diagnosing-bugs`, `typescript-best-practices`). Without `/t-mode`, only those links reach them.
 
 ## Where the skills come from
 
-[PROVENANCE.md](PROVENANCE.md) labels each skill as upstream, adapted, merged, or own. It lists what changed, records the clash decisions, and explains how to pull in upstream updates. The skills I left out are in `upstream.json`.
+[PROVENANCE.md](PROVENANCE.md) labels each skill as upstream, adapted, or own. It lists what changed, records the design decisions, and explains how to pull in upstream updates.
 
-Adapted from Matt Pocock's skills and Lauren Tan's (poteto) pstack, both MIT. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Built from Matt Pocock's skills, MIT. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
